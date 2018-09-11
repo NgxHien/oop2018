@@ -2,9 +2,9 @@ package week1;
 
 public  class Student{
 	private	String 	Name,
-					ID,
-					Group,	
-					email;
+			ID,
+			Group,	
+			email;
 	public void setName(String name){  
 		this.Name = name;
 	}
