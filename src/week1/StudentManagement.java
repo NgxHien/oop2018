@@ -9,8 +9,9 @@ public class StudentManagement {
     }
 
     void studentsByGroup() {
+    	System.out.println("INT22044");
 		for (Student std: students) {
-
+			System.out.println();
 		}
 		// TODO:
     }
