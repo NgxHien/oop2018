@@ -8,10 +8,10 @@ public class StudentManagement {
        		return (s1.getGroup() == s2.getGroup());
     }
 
-    void studentsByGroup() {
-    	System.out.println("INT22044");
+    static void studentsByGroup() {
+    	System.out.println("INT22041");
 		for (Student std: students) {
-			System.out.println();
+			System.out.println(std.getName());
 		}
 		// TODO:
     }
@@ -57,6 +57,7 @@ public class StudentManagement {
 		students[3] = std4;
 		students[4] = std5;
 		removeStudent("17100730");
+		studentsByGroup();
 		// TODO:
     }
 }
