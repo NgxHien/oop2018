@@ -4,15 +4,22 @@ public class StudentManagement {
 	Student[] students = new Student[99];
     // TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
 
-    public boolean sameGroup(Student s1, Student s2) {
+    public static boolean sameGroup(Student s1, Student s2) {
        		return (s1.getGroup() == s2.getGroup());
     }
 
     void studentsByGroup() {
+
         // TODO:
     }
 
     void removeStudent(String id) {
+    	for ( int a = 0; a<100;a++){
+    		if(students[a].getID()== id) {
+				for (int b = 0; b<100;b++) students[b] = students[b+1];
+				a--;
+			}
+		}
         // TODO:
     }
 
