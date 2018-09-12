@@ -1,7 +1,7 @@
 package week1;
 
 public class StudentManagement {
-	Student[] students = new Student[99];
+	public static Student[] students = new Student[99];
     // TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
 
     public static boolean sameGroup(Student s1, Student s2) {
@@ -9,11 +9,13 @@ public class StudentManagement {
     }
 
     void studentsByGroup() {
+		for (Student std: students) {
 
-        // TODO:
+		}
+		// TODO:
     }
 
-    void removeStudent(String id) {
+    static void removeStudent(String id) {
     	for ( int a = 0; a<100;a++){
     		if(students[a].getID()== id) {
 				for (int b = 0; b<100;b++) students[b] = students[b+1];
@@ -48,6 +50,12 @@ public class StudentManagement {
 		// Test 10
 		System.out.println( sameGroup(std1,std4));
 		System.out.println( sameGroup(std1,std5));
+		students[0] = std1;
+		students[1] = std2;
+		students[2] = std3;
+		students[3] = std4;
+		students[4] = std5;
+		removeStudent("17100730");
 		// TODO:
     }
 }
