@@ -1,32 +1,34 @@
 package week1;
 
 public class StudentManagement {
-	public static Student[] students = new Student[99];
+	Student[] students = new Student[99];
     // TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
 
-    public static boolean sameGroup(Student s1, Student s2) {
-       		return (s1.getGroup() == s2.getGroup());
+    public boolean sameGroup(Student s1, Student s2) {
+    	return (s1.getGroup() == s2.getGroup());
     }
 
-    static void studentsByGroup() {
-    	System.out.println("INT22041");
-		for (Student std: students) {
-			System.out.println(std.getName());
-		}
+	void studentsByGroup() {
+		System.out.println("INT22044\n");
+		for (int a =0; a < students.length;a++)
+			if (students[a].getGroup() == "INT22044")
+				System.out.println(students[a].getName());
+
 		// TODO:
-    }
+	}
 
-    static void removeStudent(String id) {
-    	for ( int a = 0; a<100;a++){
-    		if(students[a].getID()== id) {
-				for (int b = 0; b<100;b++) students[b] = students[b+1];
-				a--;
+	void removeStudent(String id) {
+		for ( int a = 0; a<this.students.length;a++){
+			if(this.students[a].getID().equals(id)) {
+				for (int b = a; b<this.students.length;b++) this.students[b] = this.students[b+1];
 			}
 		}
-        // TODO:
-    }
+		// TODO:
+	}
 
-    public static void main(String[] args) {
+
+	public static void main(String[] args) {
+    	StudentManagement stds = new StudentManagement();
     	Student std1 = new Student();
 		std1.setName("Nguyen Xuan Hien");
 		std1.setID("17020730");
@@ -49,15 +51,14 @@ public class StudentManagement {
 		Student std5 = new Student("Nguyen Van B", "17029999", "VanB@vnu.edu.vn");
 		std5.setGroup("INT22042");
 		// Test 10
-		System.out.println( sameGroup(std1,std4));
-		System.out.println( sameGroup(std1,std5));
-		students[0] = std1;
-		students[1] = std2;
-		students[2] = std3;
-		students[3] = std4;
-		students[4] = std5;
-		removeStudent("17100730");
-		studentsByGroup();
+		System.out.println( stds.sameGroup(std1,std4));
+		System.out.println( stds.sameGroup(std1,std5));
+		stds.students[0] = std1;
+		stds.students[1] = std2;
+		stds.students[2] = std3;
+		stds.students[3] = std4;
+		stds.students[4] = std5;
+		stds.studentsByGroup();
 		// TODO:
     }
 }

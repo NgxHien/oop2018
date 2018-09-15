@@ -1,6 +1,6 @@
 package week1;
 
-public  class Student{
+public class Student{
 	private	String 	Name,
 			ID,
 			Group,	
@@ -23,7 +23,7 @@ public  class Student{
 	public String getGroup(){
 		return this.Group;
 	}
-	public void setemail(String mail){  
+	public void setemail(String mail) {
 		this.email = mail;
 	}
 	public String getemail(){
