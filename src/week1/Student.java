@@ -2,10 +2,11 @@ package week1;
 
 public class Student{
 	private	String 	Name,
-			ID,
-			Group,	
-			email;
-	public void setName(String name){  
+					ID,
+					Group,
+					email;
+	// TODO: khai báo các thuộc tính cho Student
+	public void setName(String name){
 		this.Name = name;
 	}
 	public String getName(){
@@ -29,22 +30,36 @@ public class Student{
 	public String getemail(){
 		return this.email;
 	}
-	public void getInfo(){
-		System.out.println(this.Name + "\n" + this.ID + "\n" + this.Group + "\n" + this.email);
+	// TODO: khai báo các phương thức getter, setter cho Student
+	String getInfo(){
+		return this.getName()+"\n"+this.getID()+"\n"+this.getGroup()+"\n"+this.getemail();
 	}
-	public Student(){
+	/**
+	 * Constructor 1
+	 */
+	Student(){
 		this.Name ="Student";
 		this.ID = "000";
 		this.Group = "INT22041";
 		this.email = "uet@vnu.edu.vn";
 	}
-	public Student(String n, String sid, String em)	{
+	/**
+	 * Constructor 2
+	 * @param n : ten SV
+	 * @param sid : ID
+	 * @param em : ten Email
+	 */
+	Student(String n, String sid, String em)	{
 		this.Name = n ;
 		this.ID = sid ;
 		this.Group = "INT22041";
 		this.email = em ;
 	}
-	public Student(Student s){
+	/**
+	 * Constructor 3
+	 * @param s: s
+	 */
+	Student(Student s){
 		this.Name = s.Name ;
 		this.ID = s.ID ;
 		this.Group = s.Group ;
