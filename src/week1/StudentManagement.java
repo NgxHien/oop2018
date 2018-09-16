@@ -11,13 +11,13 @@ public class StudentManagement {
         // TODO:
 		System.out.println("Danh sach lop INT22041:");
 		for (int i = 0; i < students.length; i++) {
-			if (students[i].getGroup().equals("INT22041")) {
+			if (students[i].getGroup().equals("INT22041") && students[i].getName()!= "Student") {
 				System.out.println(students[i].getInfo());
 			}
 		}
 		System.out.println("Danh sach lop INT22042:");
 		for (int i = 0; i < students.length; i++) {
-			if (students[i].getGroup().equals("INT22042")) {
+			if (students[i].getGroup().equals("INT22042") && students[i].getName()!= "Student") {
 				System.out.println(students[i].getInfo());
 			}
 		}
@@ -38,7 +38,10 @@ public class StudentManagement {
 
 	public static void main(String[] args) {
     	StudentManagement stds = new StudentManagement();
-    	stds.students = new Student[99];
+    	Student[] stdslist = stds.students;
+        for (int i=0;i<100;i++){
+            stdslist[i] = new Student();
+        }
     	Student std1 = new Student();
 		std1.setName("Nguyen Xuan Hien");
 		std1.setID("17020730");
@@ -66,6 +69,11 @@ public class StudentManagement {
 		stds.students[2] = std5;
 		stds.studentsByGroup();
 		stds.removeStudent("17020000");
+        System.out.println("Danh sach lop sau khi xoa: ");
+        for (int i = 0; i < stds.students.length; i++) {
+            if (stds.students[i].getName() != "Student" )
+                System.out.println(stds.students[i].getInfo());
+        }
 		// TODO:
     }
 }
