@@ -1,40 +1,37 @@
 package week1;
 
 public class StudentManagement {
-	public Student[] students = new Student[99];
-    // TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
+	// TODO: khai báo thuộc tính students là array chứa các đối tượng thuộc lớp Student (max. 100)
+    public Student[] students = new Student[100];
 
     public boolean sameGroup(Student s1, Student s2) {
-    	return (s1.getGroup().equals(s2.getGroup()));
+        return s1.getGroup().equals(s2.getGroup());
     }
-
-	void studentsByGroup() {
+	void  studentsByGroup() {
+        // TODO:
 		System.out.println("Danh sach lop INT22041:");
-		for (int i = 0; i < this.students.length; i++) {
-			if (this.students[i].getGroup().equals("INT22041")) {
-				System.out.println(this.students[i].getInfo());
+		for (int i = 0; i < students.length; i++) {
+			if (students[i].getGroup().equals("INT22041")) {
+				System.out.println(students[i].getInfo());
 			}
 		}
 		System.out.println("Danh sach lop INT22042:");
-		for (int i = 0; i < this.students.length; i++) {
-			if (this.students[i].getGroup().equals("INT22042")) {
-				System.out.println(this.students[i].getInfo());
+		for (int i = 0; i < students.length; i++) {
+			if (students[i].getGroup().equals("INT22042")) {
+				System.out.println(students[i].getInfo());
 			}
 		}
-		// TODO:
 	}
 
 	void removeStudent(String id) {
     	int a,b;
-		for ( a = 0; a < this.students.length;a++) {
-			if (this.students[a].getID().equals(id)) {
-				break;
+		for ( a = 0; a < students.length;a++) {
+			if (students[a].getID().equals(id)) {
+				for ( b = a; b < students.length-1;b++)
+					students[b] = students[b+1];
+				students[students.length-1] = new Student();
 			}
 		}
-		for ( b = a; b < this.students.length;b++)
-			this.students[b] = this.students[b+1];
-		this.students[this.students.length-1] = new Student();
-
 		// TODO:
 	}
 
@@ -68,6 +65,7 @@ public class StudentManagement {
 		stds.students[1] = std3;
 		stds.students[2] = std5;
 		stds.studentsByGroup();
+		stds.removeStudent("17020000");
 		// TODO:
     }
 }

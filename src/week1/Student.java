@@ -10,25 +10,25 @@ public class Student{
 		this.Name = name;
 	}
 	public String getName(){
-		return this.Name;
+		return Name;
 	}
-	public void setID(String id){  
+	public void setID(String id){
 		this.ID = id;
 	}
 	public String getID(){
-		return this.ID;
+		return ID;
 	}
-	public void setGroup(String gr ){  
+	public void setGroup(String gr ){
 		this.Group = gr;
 	}
 	public String getGroup(){
-		return this.Group;
+		return Group;
 	}
 	public void setemail(String mail) {
 		this.email = mail;
 	}
 	public String getemail(){
-		return this.email;
+		return email;
 	}
 	// TODO: khai báo các phương thức getter, setter cho Student
 	String getInfo(){
