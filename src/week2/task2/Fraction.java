@@ -1,9 +1,10 @@
 package week2.task2;
 
 public class Fraction {
+    // TODO: khai báo các thuộc tính
     int Numerator,
         Denominator;
-    // TODO: khai báo các thuộc tính
+    
 
     public int gcd(int a, int b) {
         // TODO: Tính ước chung lớn nhất của 2 số a, b
