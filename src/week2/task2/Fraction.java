@@ -1,9 +1,10 @@
 package week2.task2;
 
 public class Fraction {
-    int Numerator,
-        Denominator;
     // TODO: khai báo các thuộc tính
+    int Numerator,          // Tử số
+        Denominator;        // Mẫu số
+
 
     public int gcd(int a, int b) {
         // TODO: Tính ước chung lớn nhất của 2 số a, b
@@ -40,6 +41,9 @@ public class Fraction {
         return fraction;
     }
 
+
+
+
     public Fraction multiply(Fraction other) {
         // TODO: Phương thức nhân hai phân số (this và other), trả về đối tượng Fraction mới
         int tu, mau;
@@ -62,6 +66,17 @@ public class Fraction {
         mau = mau/x;
         Fraction fraction = new Fraction(tu,mau);
         return fraction;
+    }
+    public boolean equals(Fraction other){
+        int x = gcd(this.Numerator, this.Denominator);
+        this.Numerator = this.Numerator/x;
+        this.Denominator = this.Denominator/x;
+        x = gcd(other.Numerator, other.Denominator);
+        other.Numerator = other.Numerator/x;
+        other.Denominator = other.Denominator/x;
+        if (this.Numerator == other.Numerator && this.Denominator == other.Denominator)
+            return true;
+        return false;
     }
 }
 
