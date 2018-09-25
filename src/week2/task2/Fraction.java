@@ -67,15 +67,13 @@ public class Fraction {
         Fraction fraction = new Fraction(tu,mau);
         return fraction;
     }
-    public boolean equals(Fraction other){
-        int x = gcd(this.Numerator, this.Denominator);
-        this.Numerator = this.Numerator/x;
-        this.Denominator = this.Denominator/x;
-        x = gcd(other.Numerator, other.Denominator);
-        other.Numerator = other.Numerator/x;
-        other.Denominator = other.Denominator/x;
-        if (this.Numerator == other.Numerator && this.Denominator == other.Denominator)
-            return true;
+    public boolean equals(Object object){
+        if (object instanceof Fraction){
+            Fraction other = (Fraction) object;
+            if (other.Denominator*this.Numerator == other.Numerator*this.Denominator)
+                return true;
+            else return false;
+        }
         return false;
     }
 }
