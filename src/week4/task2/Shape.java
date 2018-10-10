@@ -1,12 +1,14 @@
 package week4.task2;
 /**
- *
+ * Class Shape có 2 thuộc tính Color(máu sắc) và filled(có chứa màu không ?)
  * @author NgxHien
  */
 public class Shape {
-    private String color;
-    private boolean filled;
-
+    protected String color;
+    protected boolean filled;
+    /**
+     * Khởi tạo Shape(getter, setter)
+     */
     public Shape() {
         this.color="red";
         this.filled=true;

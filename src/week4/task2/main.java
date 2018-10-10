@@ -1,7 +1,6 @@
 package week4.task2;
 
 public class main {
-    public class Main2 {
         public static void main(String[] args){
             Shape shape1 = new Shape();
             System.out.println(shape1);
@@ -71,5 +70,4 @@ public class main {
             System.out.printf("The area is: %.2f%n", square1.getArea());
             System.out.printf("The perimeter is: %.2f%n", square1.getPerimeter());
         }
-    }
 }

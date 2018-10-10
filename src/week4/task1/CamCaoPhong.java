@@ -1,7 +1,7 @@
 package week4.task1;
 
 /**
- * TODO: Class QuaTao kế thừa (has_a) từ Class HoaQua, mang các thuộc tính của HoaQua
+ * TODO: Class QuaTao kế thừa (is_a) từ Class QuaCam, mang các thuộc tính của QuaCam
  *
  *
  * @author NgxHien

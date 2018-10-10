@@ -1,11 +1,13 @@
 package week4.task2;
 
 /**
- *
+ * Square kế thừa từ Class Rectangle
  * @author NgxHien
  */
 public class Square extends Rectangle {
-
+    /**
+     * Khởi tạo Square
+     */
     public Square() {
         super();
     }
@@ -15,6 +17,10 @@ public class Square extends Rectangle {
     public Square(double side, String color, boolean filled) {
         super(side, side, color, filled);
     }
+
+    /**
+     * Getter, setter
+     */
     public void setSide(double side) {
         width=side;
         length=side;
@@ -30,6 +36,10 @@ public class Square extends Rectangle {
     public void setLength(double side){
         setSide(side);
     }
+
+    /**
+     * @return trả về thông tin của Square
+     */
     public String toString(){
         return super.toString();
     }

@@ -1,14 +1,14 @@
 package week4.task1;
 
 /**
- * TODO: Class QuaTao kế thừa (has_a) từ Class HoaQua, mang các thuộc tính của HoaQua
+ * TODO: Class QuaTao kế thừa (is_a) từ Class HoaQua, mang các thuộc tính của HoaQua
  * Muivi: Vị quả cam
  * Mau: Màu quả cam
  * @author NgxHien
  */
 public class QuaCam extends Hoaqua{
-    private String Muivi = new String("Chua");
-    private String Mau = new String("Cam");
+    protected String Muivi = new String("Chua");
+    protected String Mau = new String("Cam");
     public int getGia(){
         return Gia;
     }
