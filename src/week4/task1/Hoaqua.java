@@ -10,18 +10,14 @@ package week4.task1;
 public abstract class Hoaqua {
     Integer Gia, Soluong;
     String Nguongoc;
-    abstract void setHoaQua(int gia, int soluong, String nguongoc){
+    void setHoaQua(int gia, int soluong, String nguongoc){
         Gia = gia;
         Soluong = soluong;
         Nguongoc =nguongoc;
     }
-    abstract int getGia(){
-        return Gia;
-    }
-    abstract int getSoluong(){
-        return Soluong;
-    }
-    abstract String getNguongoc(){
-        return Nguongoc;
-    }
+    abstract int getGia();
+
+    abstract int getSoluong();
+
+    abstract String getNguongoc();
 }

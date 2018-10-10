@@ -18,4 +18,10 @@ public class QuaCam extends Hoaqua{
     public String getNguongoc(){
         return Nguongoc;
     }
+    public String getMuivi(){
+        return Muivi;
+    }
+    public String getMau() {
+        return Mau;
+    }
 }
