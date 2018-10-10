@@ -4,7 +4,7 @@ package week4.task2;
  * @author NgxHien
  */
 public class Circle extends Shape {
-    public final double PI = 3.14;
+    public static final double PI = 3.14;
     protected double radius;
 
     /**
