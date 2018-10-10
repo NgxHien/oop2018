@@ -1,18 +1,10 @@
 package week4.task1;
 /**
- * TODO:
+ * TODO: Class QuaTao kế thừa (has_a) từ Class HoaQua, mang các thuộc tính của HoaQua
  *
  *
  * @author NgxHien
  */
 public class CamSanh extends QuaCam{
-    public int getGia(){
-        return Gia;
-    }
-    public int getSoluong(){
-        return Soluong;
-    }
-    public String getNguongoc(){
-        return Nguongoc;
-    }
+
 }

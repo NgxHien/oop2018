@@ -1,9 +1,9 @@
 package week4.task1;
 
 /**
- * TODO:
- *
- *
+ * TODO: Class QuaTao kế thừa (has_a) từ Class HoaQua, mang các thuộc tính của HoaQua
+ * Muivi: Vị quả cam
+ * Mau: Màu quả cam
  * @author NgxHien
  */
 public class QuaCam extends Hoaqua{
