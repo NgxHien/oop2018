@@ -2,43 +2,53 @@ package week5_6;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.awt.event.*;
+import java.util.*;
 
-public class Layer extends JPanel {
-    private List<Shape> list = new ArrayList<>();
-    public void Layer(){
-        list.add(new Circle());
-        list.add(new );
-    }
-    public  void paint (Graphics g){
-        super.paint(g);
-        for (int i = 0; i < list.size(); i++){
-            if (list.get(i) instanceof Circle) {
-                g.fillOval(list.get(i).x,list.get(i).y,list.get(i)).radius,((Circle) list.get(i)).radius());
-            }
+class Layer extends JPanel {
 
+    private java.util.List<Shape> shapes = new ArrayList<>();
+
+    public Layer(int w, int h) {
+        this.setBounds(0, 0, w, h);
+    }
+
+    public void moveShapes() {
+        for (Shape shape : shapes) {
+            shape.move();
+            //System.out.println(shape);
+        }
+        this.repaint();
+    }
+
+    public void removeTriangles() {
+        for (int i = shapes.size() - 1; i >= 0; i--) {
+            Shape s = shapes.get(i);
+            if (s instanceof Triangle) {
+                shapes.remove(i);
+            }
         }
     }
-    public void displayLayer() {
-        while (true){
-            try {
-                Thread.sleep(50);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+
+    public void removeCircles() {
+        for (int i = shapes.size() - 1; i >= 0; i--) {
+            Shape s = shapes.get(i);
+            if (s instanceof Circle) {
+                shapes.remove(i);
             }
-            for(int i = 0; i < list.size() ; i++){
-                list.get(i).moving();
-            }
-            this.repaint();
         }
     }
-    public void removeTriangle(){
-        for (int i=0; i < list.size(); i++){
-            if (list.get(i) instanceof Rectangle){
-                list.remove(i);
-            }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        for (Shape shape : shapes) {
+            shape.draw(g);
         }
+    }
+
+    public void addShape(Shape shape) {
+        this.shapes.add(shape);
     }
 }
 

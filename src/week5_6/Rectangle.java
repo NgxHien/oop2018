@@ -1,36 +1,43 @@
 package week5_6;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.*;
+
 /**
  * Thừa kế từ lớp Shape
  * Gồm 2 thuộc tính width(chiều dài), length(chiều rộng)
  * @author NgxHien
  */
-public class Rectangle extends Shape {
-    protected double width;
-    protected double height;
-    int Speed;
-    /**
-     * Getter, setter
-     */
-    public void setWidth(double width, double height) {
-        this.width = width;
-        this.height = height;
+class Rectangle extends Shape {
+    protected Point start;
+    protected int length;
+    protected int width;
+
+    @Override
+    public void draw(Graphics g) {
+        g.setColor(color);
+        g.fillRect(start.x, start.y, width, length);
     }
-    public double getWidth(){
-        return width;
+
+    @Override
+    public void move() {
+        this.start.x += this.velocity.x;
+        this.start.y += this.velocity.y;
+
+        if (this.start.x <= 0 || this.start.x + this.width >= Diagram.WIDTH) {
+            this.velocity.x = -this.velocity.x;
+        }
+
+        if (this.start.y <= 0 || this.start.y + this.length >= Diagram.HEIGHT) {
+            this.velocity.y = -this.velocity.y;
+        }
+
     }
-    public double getLength(){
-        return height;
-    }
-    /**
-     * Chuyển động
-     */
-    public void moving(){
-        if (x>Diagram.getMainFrame().getHeight() - height - 15 || x<=0)
-            x = -x;
-        if (y>Diagram.getMainFrame().getWidth() - width - 15 || y <=0)
-            y = -y;
-        x = x + Speed;
-        y = y + Speed;
+
+    @Override
+    public String toString() {
+        return String.format("Rectangle[%s]", this.start);
     }
 }

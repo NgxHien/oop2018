@@ -3,16 +3,11 @@ package week5_6;
 import java.awt.*;
 import java.util.Random;
 
-/**
- * @author NgxHien
- */
 abstract class Shape {
-    public Object moving;
-    int x,y;
-    private Color color = new Color((new Random()).nextInt(255),(new Random()).nextInt(255),(new Random()).nextInt(255));
+    protected Color color;
+    protected Point velocity;
 
-    public Color getColor() {
-        return color;
-    }
-    abstract public void moving(){};
+    public abstract void draw(Graphics g);
+    public abstract void move();
 }
+
