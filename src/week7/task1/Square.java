@@ -2,17 +2,17 @@ package week7.task1;
 
 public class Square extends Expression{
     Expression expression;
-    Square(Expression expression){
+    public Square(Expression expression){
         this.expression = expression;
     }
 
     @Override
     public String toString() {
-        return null;
+        return "(" + this.expression.toString() + ")^2";
     }
 
     @Override
     public int evaluate() {
-        return 0;
+        return this.expression.evaluate()*this.expression.evaluate();
     }
 }
