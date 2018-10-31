@@ -1,7 +1,6 @@
 package week7.task2;
 
 public class NullPointer{
-    String string;
     public void print(){
         throw new NullPointerException();
     }
