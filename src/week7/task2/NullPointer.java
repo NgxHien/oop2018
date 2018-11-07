@@ -2,7 +2,8 @@ package week7.task2;
 
 public class NullPointer{
     public void print(){
-        throw new NullPointerException();
+        String s = new String();
+        System.out.println(s.toString());
     }
     public static void main(String[] args){
         try {

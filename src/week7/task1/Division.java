@@ -28,5 +28,4 @@ public class Division extends BinaryExpression{
     public int evaluate() {
         return this.left.evaluate()/this.right.evaluate();
     }
-
 }

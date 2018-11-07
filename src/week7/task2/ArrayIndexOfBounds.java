@@ -2,7 +2,8 @@ package week7.task2;
 
 public class ArrayIndexOfBounds {
     public void print() {
-        throw new ArrayIndexOutOfBoundsException();
+        int[] a = new int[5];
+        System.out.println(a[6]);
     }
     public static void main(String[] args){
         try {
